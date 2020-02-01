@@ -10,6 +10,7 @@
     ></script>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <title>Mizuxe</title>
   </head>
   <body id="home" data-spy="scroll" data-target="#main-nav">
@@ -62,7 +63,10 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
                 rerum.
               </p>
-              <a href="#" class="btn btn-outline-secondary btn-lg text-white"
+              <a
+                id="RM"
+                href="#about"
+                class="btn btn-outline-secondary btn-lg text-white"
                 ><i class="fas fa-arrow-right"></i> Read More</a
               >
             </div>
@@ -529,13 +533,13 @@
           // Animate smooth scroll
           $("html, body").animate(
             {
-              scrollTop: $(hash).offset().top
+              scrollTop: $(hash).offset().top - 120
             },
-            900,
-            function() {
-              // Add hash to URL after scroll
-              window.location.hash = hash;
-            }
+            900
+            // function() {
+            //   // Add hash to URL after scroll
+            //   window.location.hash = hash;
+            // }
           );
         }
       });
